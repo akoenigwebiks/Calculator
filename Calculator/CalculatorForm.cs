@@ -14,6 +14,16 @@ namespace Calculator
             _activeOperator = SetActiveOperator();
         }
 
+        private void OnNumberClicked (object sender, EventArgs e)
+        {
+            _activeTextbox.Text += ((Button)sender).Text;
+        }
+
+        private void OnTextBoxClicked (object sender, EventArgs args)
+        {  
+            _activeTextbox = (TextBox)sender;
+        }
+    
         private void button_num_Click(object sender, EventArgs e)
         {
             _activeTextbox.Text += ((Button)sender).Text;

@@ -71,7 +71,7 @@
             this.textBox_val2.Name = "textBox_val2";
             this.textBox_val2.Size = new System.Drawing.Size(120, 38);
             this.textBox_val2.TabIndex = 3;
-            this.textBox_val2.Click += new System.EventHandler(this.textBox_val_Click);
+            textBox_val2.Click += OnTextBoxClicked;
             // 
             // textBox_val1
             // 
@@ -100,7 +100,7 @@
             this.button_num_1.TabIndex = 8;
             this.button_num_1.Text = "1";
             this.button_num_1.UseVisualStyleBackColor = false;
-            this.button_num_1.Click += new System.EventHandler(this.button_num_Click);
+            this.button_num_1.Click += OnNumberClicked;
             // 
             // button_num_2
             // 
@@ -111,7 +111,7 @@
             this.button_num_2.TabIndex = 9;
             this.button_num_2.Text = "2";
             this.button_num_2.UseVisualStyleBackColor = false;
-            this.button_num_2.Click += new System.EventHandler(this.button_num_Click);
+            this.button_num_2.Click += OnNumberClicked;
             // 
             // button_num_3
             // 
@@ -122,7 +122,7 @@
             this.button_num_3.TabIndex = 10;
             this.button_num_3.Text = "3";
             this.button_num_3.UseVisualStyleBackColor = false;
-            this.button_num_3.Click += new System.EventHandler(this.button_num_Click);
+            this.button_num_3.Click += OnNumberClicked;
             // 
             // button_operator_add
             // 
@@ -161,7 +161,7 @@
             this.button_num_6.TabIndex = 14;
             this.button_num_6.Text = "6";
             this.button_num_6.UseVisualStyleBackColor = false;
-            this.button_num_6.Click += new System.EventHandler(this.button_num_Click);
+            this.button_num_6.Click += OnNumberClicked;
             // 
             // button_num_5
             // 
