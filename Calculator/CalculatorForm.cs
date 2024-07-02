@@ -22,7 +22,7 @@ namespace Calculator
         private void button_operator_Click(object sender, EventArgs e)
         {
             _activeOperator = ((Button)sender).Text;
-            textBox_result.Text = _activeOperator;
+            comboBox_operator.Text = _activeOperator;
         }
 
         private void textBox_val_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Calculator
 
         private string SetActiveOperator()
         {
-            string operatorText = comboBox_operator.GetItemText(comboBox_operator.SelectedItem);
+            string operatorText = comboBox_operator.Text;
             return operatorText == string.Empty ? "+" : operatorText;
         }
 
@@ -49,7 +49,7 @@ namespace Calculator
                     return (val1 + val2);
                 case "-":
                     return (val1 - val2);
-                case "*":
+                case "x":
                     return (val1 * val2);
                 case "/":
                     return (val1 / val2);
