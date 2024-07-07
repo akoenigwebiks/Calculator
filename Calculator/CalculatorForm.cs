@@ -14,16 +14,16 @@ namespace Calculator
             _activeOperator = SetActiveOperator();
         }
 
-        private void OnNumberClicked (object sender, EventArgs e)
+        private void OnNumberClicked(object sender, EventArgs e)
         {
             _activeTextbox.Text += ((Button)sender).Text;
         }
 
-        private void OnTextBoxClicked (object sender, EventArgs args)
-        {  
+        private void OnTextBoxClicked(object sender, EventArgs args)
+        {
             _activeTextbox = (TextBox)sender;
         }
-    
+
         private void button_num_Click(object sender, EventArgs e)
         {
             _activeTextbox.Text += ((Button)sender).Text;
@@ -53,19 +53,28 @@ namespace Calculator
 
         private double? Calculate(double val1, double val2, string selectedOperator)
         {
+            double result = 0;
             switch (selectedOperator)
             {
                 case "+":
-                    return (val1 + val2);
+                    result = (val1 + val2);
+                    break;
                 case "-":
-                    return (val1 - val2);
+                    result = (val1 - val2);
+                    break;
+
                 case "x":
-                    return (val1 * val2);
+                    result = (val1 * val2);
+                    break;
+
                 case "/":
-                    return (val1 / val2);
+                    result = (val1 / val2);
+                    break;
+
                 default:
                     return null;
             }
+            return result;
         }
 
         private void button_equals_Click(object sender, EventArgs e)
